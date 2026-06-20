@@ -183,6 +183,7 @@ nav{
     margin:10px;
 
     border-radius:50px;
+    text-align:center;
 
     text-decoration:none;
 
@@ -196,6 +197,19 @@ nav{
 
 .btn:hover{
     transform:translateY(-5px);
+}
+
+/* Special styling for the Live Demo button */
+a.btn[href*="netlify.app"]{
+    background:#860ee9;
+    color:white;
+    border:2px solid rgba(255,255,255,0.25);
+    box-shadow:0 15px 30px rgba(46, 68, 71, 0.25);
+}
+
+a.btn[href*="netlify.app"]:hover{
+    background:#730dd0;
+    transform:translateY(-5px) scale(1.02);
 }
 
 /* Sections */
@@ -336,6 +350,37 @@ section h2{
 
 #certifications .card{
     font-weight:500;
+}
+/* Certificate Cards */
+
+.certificate-card{
+    background:white;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.certificate-card:hover{
+    transform:translateY(-10px);
+}
+
+.certificate-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+    border:1px solid #eee;
+}
+
+.certificate-card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+    font-size:1.1rem;
+}
+
+.certificate-card p{
+    color:var(--gray);
+    font-size:0.95rem;
 }
 
 /* Contact */
@@ -480,6 +525,7 @@ footer{
     }
 
     .btn{
+        color:var(--primary);
         display:block;
         width:100%;
         margin:8px 0;
